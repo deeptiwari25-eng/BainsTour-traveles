@@ -1,0 +1,257 @@
+QUICK START GUIDE - Himachal Taxi Service Website
+==================================================
+
+🎯 INSTANT SETUP (5 MINUTES)
+
+Step 1: Open the Website
+------------------------
+Simply open "index.html" in any web browser to see your website!
+- Double-click index.html
+- Or drag it into your browser
+
+Step 2: Test the Links
+-----------------------
+- Click navigation menu items
+- Try the Call Now button (will open phone dialer)
+- Try WhatsApp button (will open WhatsApp)
+- Test the hamburger menu on mobile view
+
+Step 3: Customize Your Contact Info
+-------------------------------------
+Replace all instances of "+919876543210" with YOUR phone number:
+
+Files to Edit:
+1. index.html
+2. about.html
+3. services.html
+4. packages.html
+5. vehicles.html
+6. contact.html
+7. js/script.js
+
+How to Edit:
+- Open any HTML file in a text editor (Notepad, VS Code, etc.)
+- Use Ctrl+H (Find & Replace)
+- Find: +919876543210
+- Replace with: YOUR_NUMBER
+
+
+🌐 VIEW ON YOUR PHONE
+
+Option 1: Using Local Network (Best)
+-------------------------------------
+1. Find your computer's IP address:
+   - Windows: ipconfig (look for IPv4 Address)
+   - Mac: System Preferences > Network
+
+2. Put the project folder on your desktop
+
+3. Open terminal/command prompt in the project folder
+
+4. Run: python -m http.server 8000
+
+5. On your phone, open: http://YOUR_IP:8000
+   (Replace YOUR_IP with your computer's IP)
+
+Option 2: Using Local File
+---------------------------
+Just open index.html from your phone's file browser
+
+
+🎨 CUSTOMIZE COLORS
+
+Edit css/style.css, find this section:
+```
+:root {
+  --primary-color: #0B3C5D;        (Dark Blue)
+  --secondary-color: #F4D03F;      (Yellow)
+  ...
+}
+```
+
+Change these hex codes to your preferred colors
+(Use colorpicker.com to find color codes)
+
+
+🖼️ ADD YOUR IMAGES
+
+Images are currently from Unsplash (free).
+
+To use local images:
+1. Download images to images/ folder
+2. Open HTML files
+3. Replace image URLs like:
+   FROM: src="https://images.unsplash.com/..."
+   TO: src="images/your-image.jpg"
+
+
+📝 EDIT CONTENT
+
+Easy Steps:
+1. Open any .html file in a text editor
+2. Find the text you want to change
+3. Edit it
+4. Save the file
+5. Refresh browser to see changes
+
+
+📞 IMPORTANT UPDATES NEEDED
+
+Before publishing, update these:
+
+1. Phone Number (appears 30+ times)
+   - Find & Replace: +919876543210 → YOUR_NUMBER
+   
+2. WhatsApp Number (appears 10+ times)
+   - Find & Replace in all HTML files
+
+3. Email Address
+   - contact.html line ~295
+   - Change: info@himachaltaxi.com → YOUR_EMAIL
+
+4. Location Information
+   - about.html
+   - services.html
+   - packages.html
+   - Update Himachal Pradesh references as needed
+
+
+🚀 DEPLOY TO WEBSITE
+
+Option 1: Using Free Hosting (GH Pages)
+---------------------------------------
+1. Create GitHub account (github.com)
+2. Create new repository
+3. Upload all files
+4. Enable GitHub Pages in settings
+5. Your site will be at: username.github.io/repo-name
+
+Option 2: Using Paid Hosting
+-----------------------------
+1. Buy hosting from Bluehost, GoDaddy, etc.
+2. Upload all files via FTP
+3. Set index.html as default page
+4. Done! Access via your domain
+
+Option 3: Using Netlify (Easiest)
+---------------------------------
+1. Go to netlify.com
+2. Drag & drop your project folder
+3. Your site goes live instantly!
+4. Get a free subdomain or connect custom domain
+
+
+✅ TESTING CHECKLIST
+
+After setup, test these:
+□ All pages load without errors
+□ Navigation menu works
+□ Mobile menu (hamburger) works
+□ Phone button dials correctly
+□ WhatsApp button works
+□ Contact form works
+□ All images load
+□ All links work
+□ Responsive on mobile (use Ctrl+Shift+I)
+□ Sticky buttons appear when scrolling
+
+
+🎯 NEXT STEPS
+
+1. Update all contact information
+2. Add your company logo (if needed)
+3. Add real images from your business
+4. Add real customer testimonials
+5. Deploy to a web server
+6. Get a custom domain
+7. Set up email notifications for contact form (optional backend)
+
+
+📱 MOBILE TEST
+
+To test on mobile without hosting:
+1. Connect phone to same WiFi as computer
+2. Find computer's IP address
+3. Open: http://IP:8000 in phone browser
+4. Test all functionality
+
+
+📚 FILE REFERENCE
+
+Main Files:
+- index.html → Home page
+- about.html → About/Driver info
+- services.html → All services
+- packages.html → Tour packages
+- vehicles.html → Fleet info
+- contact.html → Contact info & form
+
+Supporting Files:
+- css/style.css → All styling
+- js/script.js → All interactions
+- images/ → Image folder
+- README.md → Full documentation
+
+
+💡 COMMON CUSTOMIZATIONS
+
+Change Website Name:
+- Edit in ALL HTML files
+- Current: "Himachal Taxi"
+- Search for "Himachal Taxi" and replace
+
+Change Colors:
+- Edit css/style.css
+- Root variables at top
+
+Add Services:
+- Edit services.html
+- Duplicate a service card
+- Edit the content
+
+Add Destinations:
+- Edit packages.html
+- Duplicate a package card
+- Edit the content
+
+Add Vehicles:
+- Edit vehicles.html
+- Duplicate a vehicle card
+- Edit the content
+
+
+🆘 TROUBLESHOOTING
+
+Images not showing:
+- Check image file names match exactly
+- Ensure images are in images/ folder
+- Check file paths are correct
+
+Links not working:
+- Verify file names match (case sensitive)
+- Check HTML syntax
+
+WhatsApp not opening:
+- Make sure WhatsApp is installed
+- Check phone number format is correct
+
+Contact form not working:
+- Check JavaScript is enabled
+- Ensure all form fields are filled
+
+Styling looks wrong:
+- Clear browser cache (Ctrl+Shift+Del)
+- Check css/style.css is loaded
+- Try different browser
+
+
+📞 SUPPORT
+
+For help:
+1. Check README.md for full documentation
+2. Review code comments in HTML/CSS/JS
+3. Test in different browser
+4. Check browser console for errors (F12)
+
+
+Happy building! Your taxi service website is ready to go! 🚕
