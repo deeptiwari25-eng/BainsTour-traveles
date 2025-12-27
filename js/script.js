@@ -183,6 +183,72 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Log page load for debugging (remove in production)
+/* ============================================
+   HERO SLIDER LOGIC
+   ============================================ */
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+let currentSlide = 0;
+let slideInterval;
+
+// Function to show a specific slide
+function showSlide(index) {
+  // Remove active class from all slides
+  slides.forEach(slide => {
+    slide.classList.remove('active');
+  });
+
+  // Handle index bounds
+  if (index >= slides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  // Add active class to current slide
+  slides[currentSlide].classList.add('active');
+}
+
+// Next Slide Function
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+// Previous Slide Function
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Event Listeners for Buttons
+if (nextBtn && prevBtn) {
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetInterval();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetInterval();
+  });
+}
+
+// Auto Slide Functionality
+function startSlideShow() {
+  slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+function resetInterval() {
+  clearInterval(slideInterval);
+  startSlideShow();
+}
+
+// Initialize Slider if slides exist
+if (slides.length > 0) {
+  startSlideShow();
+}
+
 console.log('Taxi Service Website Loaded Successfully');
-console.log('Thank you for using our service!');
+
